@@ -21,6 +21,7 @@ public class InfoPrompt extends JFrame implements ActionListener, SharedData {
 
 	public InfoPrompt(String difficulty) {
 		super("Zenith Conquest");
+		
 		setSize(550, 550);
 
 		this.difficulty = difficulty;

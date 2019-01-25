@@ -12,7 +12,7 @@ public class LaunchScreen extends JFrame implements SharedData {
 	JButton easyBtn, hardBtn;
 	
 	public String difficulty;
-	Music mu = new Music();
+	static Music mu = new Music();
 	
 	public LaunchScreen() {
 		super("Zenith Conquest");
@@ -64,6 +64,7 @@ public class LaunchScreen extends JFrame implements SharedData {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			if (e.getSource() == easyBtn) {
+				
 				difficulty = "easy";
 				InfoPrompt frm = new InfoPrompt(difficulty);
 				dispose();

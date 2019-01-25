@@ -172,7 +172,7 @@ public class GamePanel extends JPanel implements Runnable, SharedData{
 
 	// ends game, produces screen with message of LOSS
 	public void gameOver() {
-
+		
 		Graphics g = this.getGraphics();
 		g.setColor(new Color(0,25,51));
 		g.fillRect(0, 0, BOARD_WIDTH, BOARD_HEIGHT);
@@ -182,7 +182,7 @@ public class GamePanel extends JPanel implements Runnable, SharedData{
 		g.drawString("the Conquestrians! Captain " + userName + ",", 50,200);
 		g.drawString("You have failed Zenith...", 50, 250);
 		g.drawImage(sadBoye, 200,300, null);
-																				// add stop music to stop 0 mile
+		LaunchScreen.mu.stopMusic();						// add stop music to stop 0 mile
 		mu.play("music/death.wav");
 		ingame = false;
 	}
